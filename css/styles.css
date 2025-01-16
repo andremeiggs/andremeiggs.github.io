@@ -1,0 +1,48 @@
+/* Estilo para el body */
+body {
+  font-family: Arial, sans-serif; /* Familia de fuentes */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo para el header */
+header {
+  background-color: #000; /* Color de fondo */
+}
+
+/* Estilo para el nav */
+nav {
+  background-color: #333; /* Color de fondo */
+    color: #fff;/* Color de texto */
+}
+
+a{color: #fff; /* Color del texto */}
+
+/* Estilo para el main */
+main {
+  background-color: #f9f9f9; /* Color de fondo */
+  font-size: 18px; /* Tamaño de fuente */
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #222; /* Color de fondo */
+  color: #fff; /* Color del texto */
+}
+
+/* Estilo para los li */
+li {
+  display: inline-block; /* Visualización en línea */
+  width: 150px; /* Anchura */
+}
+
+/* Estilo para el h1 */
+h1 {
+  text-align: center; /* Alineación del texto */
+  font-family: Georgia, serif; /* Familia de fuentes */
+  color: #fff; /* Color del texto */
+}
+
+/* Estilo para los p */
+p {
+  line-height: 1.8; /* Altura de línea */
+}
