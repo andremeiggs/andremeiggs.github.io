@@ -1,48 +1,113 @@
-/* Estilo para el body */
+/* Estilos originales */
 body {
-  font-family: Arial, sans-serif; /* Familia de fuentes */
-  font-size: 16px; /* Tamaño de fuente */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilo para el header */
+/* Header con color más oscuro */
 header {
-  background-color: #000; /* Color de fondo */
+  background: #333; /* Fondo oscuro */
+  padding: 20px;
+  border-bottom: 2px solid #222;
 }
 
-/* Estilo para el nav */
-nav {
-  background-color: #333; /* Color de fondo */
-    color: #fff;/* Color de texto */
+header h1 {
+  color: #fff;
+  text-align: center;
 }
 
-a{color: #fff; /* Color del texto */}
-
-/* Estilo para el main */
-main {
-  background-color: #f9f9f9; /* Color de fondo */
-  font-size: 18px; /* Tamaño de fuente */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0 0;
 }
 
-/* Estilo para el footer */
-footer {
-  background-color: #222; /* Color de fondo */
-  color: #fff; /* Color del texto */
+nav ul li {
+  margin: 0 20px; /* Separación horizontal entre botones */
 }
 
-/* Estilo para los li */
-li {
-  display: inline-block; /* Visualización en línea */
-  width: 150px; /* Anchura */
+nav ul li a {
+  text-decoration: none;
+  color: #f4f4f4; /* Color claro */
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px; /* Espaciado interno del botón */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+  border-radius: 5px; /* Bordes redondeados */
 }
 
-/* Estilo para el h1 */
-h1 {
-  text-align: center; /* Alineación del texto */
-  font-family: Georgia, serif; /* Familia de fuentes */
-  color: #fff; /* Color del texto */
+nav ul li a:hover {
+  color: #1abc9c; /* Color de acento al pasar el mouse */
+  background-color: #444; /* Fondo más oscuro en hover */
 }
 
-/* Estilo para los p */
-p {
-  line-height: 1.8; /* Altura de línea */
+/* Descripciones centradas */
+main p {
+  text-align: center; /* Centrar texto */
+  margin: 20px auto; /* Márgenes superior e inferior */
+  max-width: 800px; /* Mantener las descripciones legibles */
+  padding: 15px; /* Espaciado interno */
+  background: #f8f9fa; /* Fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  color: #333; /* Texto oscuro */
+}
+
+/* Enlace "Saltar al contenido principal" */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Estilo para imágenes dentro de <nav> */
+nav img {
+  width: 10%;
+  height: auto;
+}
+
+/* Imágenes en la rejilla (.grid) */
+.grid img {
+  width: 100%; /* Ocupan el ancho completo del contenedor */
+  height: auto; /* Mantienen la proporción original */
+  max-width: 300px; /* Tamaño máximo para evitar imágenes demasiado grandes */
+}
+
+/* Estilo para la clase grid */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%; /* Dos columnas */
+  justify-content: center; /* Centra las columnas */
+  align-items: center; /* Centra los elementos verticalmente */
+  row-gap: 20px; /* Espaciado entre filas */
+  column-gap: 5%; /* Espaciado entre columnas */
+}
+
+/* Imágenes en flexbox (.flex) */
+.flex img {
+  width: auto; /* Ancho automático */
+  max-width: 100%; /* No exceden el ancho del contenedor */
+  height: auto; /* Mantienen la proporción original */
+}
+
+/* Estilo para la clase flex */
+.flex {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas */
+  justify-content: space-around; /* Espaciado uniforme */
+  gap: 20px; /* Espaciado entre elementos */
 }
