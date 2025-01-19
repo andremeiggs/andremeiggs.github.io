@@ -11,13 +11,23 @@ header {
   background: #333; /* Fondo oscuro */
   padding: 20px;
   border-bottom: 2px solid #222;
+  text-align: center; /* Centra el contenido dentro del header */
 }
 
 header h1 {
   color: #fff;
   text-align: center;
+  margin-top: 10px; /* Espacio superior adicional */
 }
 
+header img {
+  display: block; /* Asegura que se comporte como un bloque */
+  margin: 20px auto; /* Centra la imagen horizontalmente y agrega espacio superior/inferior */
+  width: 150px; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene proporción */
+}
+
+/* Menú de navegación */
 nav ul {
   list-style: none;
   padding: 0;
@@ -60,18 +70,21 @@ main p {
 /* Enlace "Saltar al contenido principal" */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 100;
+  top: 20px; /* Altura del menú */
+  left: 20px; /* Separación desde el borde izquierdo */
+  background: #1abc9c; /* Fondo atractivo */
+  color: #fff; /* Texto blanco */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  z-index: 100; /* Asegura que esté sobre otros elementos */
   text-decoration: none;
-  transition: top 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.skip-link:focus {
-  top: 10px;
+.skip-link:focus,
+.skip-link:hover {
+  background-color: #148f77; /* Fondo más oscuro al enfocarlo */
+  color: #f4f4f4; /* Color del texto más claro */
 }
 
 /* Estilo para imágenes dentro de <nav> */
