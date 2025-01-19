@@ -1,33 +1,24 @@
-/* Estilos originales */
+/* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif, "Times New Roman", serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-color: #000; /* Fondo negro */
+  animation: fadeIn 1.5s ease-out; /* Animación */
 }
 
-/* Header con color más oscuro */
-header {
-  background: #333; /* Fondo oscuro */
-  padding: 20px;
-  border-bottom: 2px solid #222;
-  text-align: center; /* Centra el contenido dentro del header */
+/* Animación de Fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-header h1 {
-  color: #fff;
-  text-align: center;
-  margin-top: 10px; /* Espacio superior adicional */
-}
-
-header img {
-  display: block; /* Asegura que se comporte como un bloque */
-  margin: 20px auto; /* Centra la imagen horizontalmente y agrega espacio superior/inferior */
-  width: 150px; /* Ajusta el tamaño de la imagen */
-  height: auto; /* Mantiene proporción */
-}
-
-/* Menú de navegación */
+/* Menú de navegación (común en todas las páginas) */
 nav ul {
   list-style: none;
   padding: 0;
@@ -51,76 +42,171 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #1abc9c; /* Color de acento al pasar el mouse */
-  background-color: #444; /* Fondo más oscuro en hover */
+  color: #fff; /* Color blanco */
+  background-color: #777; /* Fondo gris más claro en hover */
 }
 
-/* Descripciones centradas */
-main p {
-  text-align: center; /* Centrar texto */
-  margin: 20px auto; /* Márgenes superior e inferior */
-  max-width: 800px; /* Mantener las descripciones legibles */
-  padding: 15px; /* Espaciado interno */
-  background: #f8f9fa; /* Fondo claro */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  color: #333; /* Texto oscuro */
+/* Estilos comunes para header, footer y botones */
+header {
+  background: #333;
+  padding: 20px;
+  border-bottom: 2px solid #222;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 0.5s forwards;
 }
 
-/* Enlace "Saltar al contenido principal" */
+footer {
+  background: #333;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid #222;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 2s forwards;
+}
+
+footer p {
+  color: #fff;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
 .skip-link {
   position: absolute;
-  top: 20px; /* Altura del menú */
-  left: 20px; /* Separación desde el borde izquierdo */
-  background: #1abc9c; /* Fondo atractivo */
-  color: #fff; /* Texto blanco */
-  padding: 10px 15px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  z-index: 100; /* Asegura que esté sobre otros elementos */
+  top: 20px;
+  right: 20px;
+  background: #d4af37;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 100;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .skip-link:focus,
 .skip-link:hover {
-  background-color: #148f77; /* Fondo más oscuro al enfocarlo */
-  color: #f4f4f4; /* Color del texto más claro */
+  background-color: #f4f4f4;
+  color: #000;
 }
 
-/* Estilo para imágenes dentro de <nav> */
-nav img {
-  width: 10%;
+/* Estilos específicos para index.html */
+.index-page header h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.index-page header img {
+  display: block;
+  margin: 40px auto;
+  width: 80%;
   height: auto;
+  border-radius: 15px;
 }
 
-/* Imágenes en la rejilla (.grid) */
-.grid img {
-  width: 100%; /* Ocupan el ancho completo del contenedor */
-  height: auto; /* Mantienen la proporción original */
-  max-width: 300px; /* Tamaño máximo para evitar imágenes demasiado grandes */
+.index-page main p {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 15px;
+  background: #333;
+  color: #fff;
+  font-family: Arial, sans-serif, "Times New Roman", serif;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 1.5s forwards;
 }
 
-/* Estilo para la clase grid */
-.grid {
-  display: grid;
-  grid-template-columns: 40% 40%; /* Dos columnas */
-  justify-content: center; /* Centra las columnas */
-  align-items: center; /* Centra los elementos verticalmente */
-  row-gap: 20px; /* Espaciado entre filas */
-  column-gap: 5%; /* Espaciado entre columnas */
-}
-
-/* Imágenes en flexbox (.flex) */
-.flex img {
-  width: auto; /* Ancho automático */
-  max-width: 100%; /* No exceden el ancho del contenedor */
-  height: auto; /* Mantienen la proporción original */
-}
-
-/* Estilo para la clase flex */
-.flex {
+.index-page .intro-container {
   display: flex;
-  flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas */
-  justify-content: space-around; /* Espaciado uniforme */
-  gap: 20px; /* Espaciado entre elementos */
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 1s forwards;
+}
+
+.index-page .intro-left,
+.index-page .intro-right {
+  width: 48%;
+  color: #fff;
+  background: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.index-page .intro-left {
+  margin-right: 2%;
+}
+
+.index-page .intro-right {
+  margin-left: 2%;
+}
+
+/* Estilos específicos para tour.html */
+.tour-page header {
+  background: #333;
+  padding: 20px;
+  border-bottom: 2px solid #222;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 0.5s forwards;
+}
+
+.tour-page header h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tour-page .tour-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.tour-page .table-container {
+  width: 55%;
+  background: #333;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.tour-page table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.tour-page th, td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+.tour-page th {
+  background-color: #555;
+}
+
+.tour-page td {
+  background-color: #444;
+}
+
+.tour-page tr:nth-child(even) {
+  background-color: #555;
+}
+
+.tour-page .map-container {
+  width: 40%;
+  text-align: center;
+}
+
+.tour-page .map-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
