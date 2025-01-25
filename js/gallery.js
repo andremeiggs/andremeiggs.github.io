@@ -14,16 +14,19 @@ function unDo() {
     imageDiv.textContent = "Haz clic en las imágenes o utiliza el teclado para mostrar el efecto.";
 }
 
-// Add tabindex and focus/blur events dynamically
+// Add tabindex, click, and focus/blur events dynamically
 function initializeGallery() {
     const previews = document.querySelectorAll('.preview');
     previews.forEach((preview, index) => {
         preview.setAttribute('tabindex', index + 1);
+        preview.addEventListener('mouseover', () => upDate(preview));
+        preview.addEventListener('mouseout', unDo);
         preview.addEventListener('focus', () => upDate(preview));
         preview.addEventListener('blur', unDo);
+        preview.addEventListener('click', () => upDate(preview));
     });
 
-    console.log("Tabindex, focus, and blur events added to", previews.length, "images.");
+    console.log("Tabindex, click, focus, and blur events added to", previews.length, "images.");
 }
 
 // Ensure keyboard navigation works
