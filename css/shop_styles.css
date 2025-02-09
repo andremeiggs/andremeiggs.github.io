@@ -380,7 +380,7 @@ body.fade-out {
 }
 
 .product-card .product-image {
-  width: 217px;
+  width: 80%;
   height: 258px;
   background-color: #e0e0e0;
 }
@@ -404,7 +404,7 @@ body.fade-out {
 }
 
 .product-card .shop-button {
-  padding: 15px 60px;
+  padding: 5% 20%;
   background-color: #000;
   color: #fff;
   text-transform: uppercase;
