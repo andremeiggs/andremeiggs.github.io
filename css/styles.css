@@ -339,7 +339,7 @@ body {
 
 .shop-items-wrapper {
     overflow: hidden;
-    width: 80%;
+    width: 100%;
 }
 
 .shop-items {
@@ -387,8 +387,8 @@ body {
         flex-direction: column;
         align-items: flex-start;
         overflow-x: auto;
-        gap: 0;
-    }
+        gap: 0 };
+    
 
     .shop-items-wrapper {
         width: 100%;
