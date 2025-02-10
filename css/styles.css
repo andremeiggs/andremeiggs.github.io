@@ -35,7 +35,7 @@ body.fade-out {
 }
 
 .btn-shop {
-   font-family: "SF Pro Display", Arial, sans-serif;
+    font-family: "SF Pro Display", Arial, sans-serif;
     font-size: 1.9vh !important;
     padding: 0.5vh 1vh;
     border: 1px solid #fff;
@@ -129,16 +129,13 @@ body.fade-out {
 
 /* Hero Section */
 .hero-section {
-    background-color: #f2f2f2;
+    background-image:url('https://andremeiggs.github.io/images/hero_image.png');
     height: 100vh;
     width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+   
     margin-top: 3vh;
     font-family: "SF Pro Display", Arial, sans-serif;
 }
@@ -215,8 +212,9 @@ body.fade-out {
 
 /* Tour Experience Section */
 #tour-experience-section {
-    background-color: #f8f8f8;
+    background-image:url('https://andremeiggs.github.io/images/experience_image.png');
     padding: 5vh 0;
+    background-size:cover;
     text-align: center;
 }
 
@@ -233,36 +231,44 @@ body.fade-out {
 }
 
 /* Banners Section */
+
+.container-fluid.banners-section{padding: 0;}
+
 .banners-section {
-    background-color: #e5e5e5;
-    padding: 5vh 0;
 }
 
 .banner-col {
     position: relative;
     background-color: #d3d3d3;
-    height: 40vh;
+    height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .banner-content {
-    text-align: center;
+    text-align: left;
     color: #000;
+    padding: 2vh vh;
+    font-family: "SF Pro Display", Arial, sans-serif;
 }
 
 .banner-subtitle {
     font-size: 2vh;
     text-transform: uppercase;
     margin-bottom: 1vh;
+    
 }
 
 .banner-title {
-    font-size: 4vh;
+    
+    font-size: 8vh;
     font-weight: bold;
     margin-bottom: 2vh;
+   
 }
+
+
 
 .banner-button {
     font-size: 1.8vh;
@@ -298,27 +304,29 @@ body.fade-out {
     padding: 1.6vh 3vh 1.6vh 3vh !important;
 }
 
-/* General */
-body {
-    font-family: "SF Pro Display", Arial, sans-serif;
-}
+
 
 /* Shop Section */
 .shop-section {
-    padding: 5vh 0;
+    padding: 10vh 0;
     background-color: #f9f9f9;
+    font-family: "SF Pro Display", Arial, sans-serif;
+   
 }
 
 .shop-title {
-    font-size: 5vh;
+    font-size: 8vh;
     font-weight: bold;
     margin-bottom: 2vh;
+
 }
 
 .shop-subtitle {
-    font-size: 2vh;
+    font-size: 3vh;
     color: #888;
     margin-bottom: 5vh;
+    font-weight: 200;
+
 }
 
 .shop-carousel {
