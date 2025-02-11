@@ -263,6 +263,20 @@ button.btn.article_button:hover {
         font-size: 1.4vh; /* Adjust button text size */
         padding: 1vh 2.5vh;
     }
+    
+    
+    @media (max-width: 768px) {
+    #hero-section{
+        background-image: url('https://andremeiggs.github.io/images/article_image_mobile.png');
+        background-size: cover;/* Imagen para mobile */
+    }
+}
+    
+    
+    
+    
+    
+    
 }
 
 
